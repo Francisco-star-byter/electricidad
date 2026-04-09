@@ -19,12 +19,15 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
 }
 
 body {
    font-family: 'poppins', sans-serif;
    margin: 0;
    overflow-x: hidden;
+   position: relative;
 }
 
 /*--------NAVBAR-----*/
@@ -33,7 +36,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 900;
 }
 
 .nav-links {
@@ -490,12 +493,14 @@ header {
 .galeria-container {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .galeria-track {
     display: flex;
     gap: 20px;
     width: max-content;
+    will-change: transform;
     animation: scroll-infinito 30s linear infinite;
 }
 
@@ -508,6 +513,7 @@ header {
     width: 300px;
     height: 350px;
     object-fit: cover;
+    flex-shrink: 0;
     border-radius: 15px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
